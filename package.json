@@ -1,0 +1,23 @@
+{
+  "name": "headerparser",
+  "version": "1.0.0",
+  "description": "fcc header parse microservice",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AUS-luke/headerparser.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/AUS-luke/headerparser/issues"
+  },
+  "homepage": "https://github.com/AUS-luke/headerparser#readme",
+  "dependencies": {
+    "express": "^4.14.0",
+    "ua-parser": "^0.3.5"
+  }
+}
