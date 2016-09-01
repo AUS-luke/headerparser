@@ -9,7 +9,7 @@ app.use('/api/whoami', (req, res) => {
   var language = req.headers['accept-language'].match(/^[a-z-]+/gi).toString();
 
   var obj = {
-    ipaddress: req.connection.remoteAddress,
+    ipaddress: req.headers['x-forwarded-for'] || req.connection.remoteAddress,
     language: language,
     software: software
   };
