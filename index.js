@@ -7,7 +7,7 @@ const port = process.env.PORT || 8080;
 app.use('/api/whoami', (req, res) => {
   var software;
   try {
-    software = req.headers['user-agent'].match(/\([a-z\d.\s_;\-:#@&]*\)/i).toString().match(/[a-z\d.\s_;\-:#@&]*/i);
+    software = req.headers['user-agent'].match(/\([a-z\d.\s_;\-:#@&]*\)/i).toString().replace(/[{()}]/g, '');
   } catch(err) {
     software = req.headers['user-agent'];
   }
